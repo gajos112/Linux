@@ -3,4 +3,4 @@ Monitoring Performance Tools:
 - ip link -s
 - ethtool -S eth0
 - iptraf (not installed default, realtime monitoring)
-- ntop (not installed default)
+- ntop (not installed default, web browser tool)
