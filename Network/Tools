@@ -6,4 +6,5 @@ Common Troubleshooting Tools:
 - telnet
 - openssl s_client -connect EXAMPLE.COM:443
 - tcpdump/wireshark (tcpdump -v -i eth0 -w test.pcap)
-- ss (ss is used to dump socket statistics. It allows showing information similar to netstat.)
+- ss (Socket statistics. It allows showing information similar to netstat, ss -tua)
+- netstat (netstat -tulpen)
