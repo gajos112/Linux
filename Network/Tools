@@ -1,0 +1,9 @@
+Common Troubleshooting Tools:
+- ping
+- traceroute
+- nmap
+- arp
+- telnet
+- openssl s_client -connect EXAMPLE.COM:443
+- tcpdump/wireshark
+- ss (ss is used to dump socket statistics. It allows showing information similar to netstat.)
