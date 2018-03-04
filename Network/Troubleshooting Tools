@@ -7,4 +7,6 @@ Common Troubleshooting Tools:
 - openssl s_client -connect EXAMPLE.COM:443
 - tcpdump/wireshark (tcpdump -v -i eth0 -w test.pcap)
 - ss (Socket statistics. It allows showing information similar to netstat, ss -tuna)
+      - ss -at dst :443 or dst :80
+      - ss -tunap
 - netstat (netstat -tulpen)
