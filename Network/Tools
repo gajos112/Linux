@@ -5,5 +5,5 @@ Common Troubleshooting Tools:
 - arp
 - telnet
 - openssl s_client -connect EXAMPLE.COM:443
-- tcpdump/wireshark
+- tcpdump/wireshark (tcpdump -v -i eth0 -w test.pcap)
 - ss (ss is used to dump socket statistics. It allows showing information similar to netstat.)
