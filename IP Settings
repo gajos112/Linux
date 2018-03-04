@@ -35,6 +35,11 @@ root@kai:/etc/network# ip address show
     inet6 fe80::a00:27ff:febe:c78/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 
+-------------------------------------------------IP ADDRESS ADD/DEL--------------------------------------------------
+
+root@kai:# ip address add dev eth0 10.0.2.16/24
+root@kai:# ip address del dev eth0 10.0.2.16/24
+
 --------------------------------------------------IP -S LINK---------------------------------------------------
 
 root@kai:/etc/network# ip -s link
@@ -50,8 +55,9 @@ root@kai:/etc/network# ip -s link
     6016587    10240    0       0       0       8       
     TX: bytes  packets  errors  dropped carrier collsns 
     3574474    10973    0       0       0       0    
-    
+
 -----------------------------------------------------------NMTUI--------------------------------------------------
+
 nmtui - Text User Interface for controlling NetworkManager
 
 ------------------------------------------------/ETC/NETWORK/INTERFACES--------------------------------------------------
