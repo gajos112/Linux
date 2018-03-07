@@ -1,0 +1,37 @@
+SysVinit is a much older system to manage service startup during the boot process in a Linux system. 
+SysVinit has been around since basically forever.
+
+In SysVinit, there's a first program to run after the kernel is loaded. That program is called init. Init does a few thing,
+one of which is to load a series of scripts that start various system services, like networking, the ssh daemon, things like that.
+
+The problem with SysVinit is that it takes careful tuning. Say you have an Network Filesystem (NFS) client that you want to run on startup. 
+Well, NFS doesn't make sense to run before networking is working. So you have to make sure it waits to start until networking is
+already working.
+
+- service - service  runs  a System V init script or systemd unit in as predictable an environment as possible, 
+  removing most environment variables and with the current working directory set to /.
+  
+- service --status-all - list all services which can be started.
+- service ntp stop
+- service ntp start
+- /etc/rc5.d - The scripts in this directory are executed each time the system enters this runlevel. The scripts are all symbolic links 
+  whose targets are located in /etc/init.d/ .
+
+ Systemd is dependency based. When you define and configure a Systemd service, you define it's dependencies. 
+ Our hypothetical NFS service from earlier has a dependency on networking.
+
+This has a few advantages. Number one is that now you can start services in parallel. The only thing required to start a service is 
+that its dependencies must already be started. You can start NFS, ssh, samba, all at the same time, because they don't interact 
+with each other in any way. That makes boot times a lot faster.
+
+Number two is that you can start services on demand. You don't need an ssh daemon running until something requests access to it. 
+So why not wait until a client tries to open a connection to your server to start the service? That also reduces boot times, especially 
+on desktop systems which can set a high priority on getting the GUI up and running faster, and leave all the background services 
+to start up as needed.
+
+There are other advantages too. 
+- Systemd adds the ability to have system logs going back all the way to boot, unlike the current system where syslogd 
+  only starts very late in the process. 
+
+- Systemd also adds the ability to manage services by groups, rather than individually.
+
