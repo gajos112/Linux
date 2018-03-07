@@ -2,7 +2,10 @@ lsmod - Show the status of modules in the Linux Kernel
 
 modprope "module name" - Add and remove modules from the Linux Kernel. Modprobe looks in the module directory /lib/modules/`uname -r` 
       for all the modules and other files, except for the optional configuration files in  the /etc/modprobe.d directory.
-      
+
+modinfo "module name" - modinfo extracts information from the Linux Kernel modules given on the command line. If the module name 
+      is not a filename, then the /lib/modules/version directory is searched, as is also done by modprobe(8) when loading kernel modules.
+
 lspci - utility for displaying information about PCI buses in the system and devices connected to them. You can -v options for verbose.
 
 lsusb - utility for displaying information about USB buses in the system and the devices connected to them. You can -v options for verbose.
