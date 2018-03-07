@@ -1,0 +1,42 @@
+Runlevels in Linux are seven and they are:
+
+    0 = halt
+    1 = single user
+    2 = CLI, multi-user, no net
+    3 = CLI, multi-user, networked
+    4 = open
+    5 = GUI, multi-user, networked
+    6 = reboot
+
+When you enter a specific runlevel, Linux will run some scripts that are located at:
+
+- /etc/rc0.d Run level 0 
+- /etc/rc1.d Run level 1 
+- /etc/rc2.d Run level 2 
+- /etc/rc3.d Run level 3 
+- /etc/rc4.d Run level 4 
+- /etc/rc5.d Run level 5 
+- /etc/rc6.d Run level 6
+
+who - Print information about users who are currently logged in.
+who -r, --runlevel - print current runlevel
+runlevel - Print previous and current SysV runlevel
+
+init - systemd system and service manager
+telinit - may be used to change the SysV system runlevel. Since the concept of SysV runlevels is obsolete the runlevel requests will
+          be transparently translated into systemd unit activation requests
+          
+init 6 = reboot
+shutdown -r — restarts
+shutdown -s — shutsdown
+shutdown -l — logoff
+shutdown -t xx — where xx is number of seconds to wait till shutdown/restart/logoff
+shutdown -i — gives you a dialog box to fill in what function you want to use
+shutdown -a — aborts the previous shutdown command....very handy!
+shutdown -h — hibernate. Easy mistake - it's not for help
+shutdown -y — Removes all prompts at shutdown (Help not available in any documentation)
+
+Additional options:
+-f — Force the selected action
+-t <seconds> — Set time to shutdown. Use -t 0 for "now"
+-c <message> — Adds Message to Shutdown
