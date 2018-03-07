@@ -1,0 +1,16 @@
+BIOS -> BOOTLOADER -> KERNEL -> INIT
+
+- BIOS - test memory if there is enough to load krnerl and a little bit diagnostic, also default boot divce is define in BIOS.
+- BOOTLOADER - Looking at the MBR, contains instruction to boot the system, partition information and location in hardware of KERNEL.
+- KERNEL - More instruction, driver information from mouse, screen etc.
+- INIT - Starts all progrms on comouter. Procces ID of 1, it starts web, mail server etc. 
+
+dmesg - used to examine or control the kernel ring buffer. The default action is to display all messages from the kernel ring buffer.
+
+ps - displays information about a selection of the active processes.  If you want a repetitive update of the selection and the
+     displayed information, use top instead. To see every process on the system using standard syntax: ps -e, ps -ef
+
+top -  The top program provides a dynamic real-time view of a running system. It can display system summary information as well as a list
+       of processes or threads currently being managed by the Linux kernel. The types of system summary information shown and the  types,
+       order and size of information displayed for processes are all user configurable and that configuration can be made persistent
+       across restarts.
