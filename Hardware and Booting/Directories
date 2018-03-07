@@ -32,10 +32,20 @@ ls /F - Directories will be listed with slash.
 
 /var - pliki systemowe, ale których zawartość często się zmienia, jak logi programów/systemu, pliki html czy skrypty php/cgi 
        wykorzystywane przez serwer www - inaczej mówiąc są to dane zapisywane przez system i ważniejsze programy
-       
-/sbin - pliki wykonywalne poleceń, które mogą być wykonywane tylko przez administratora
 
-/usr - User Syste Resources dodatkowe programy, które umożliwiają pracę zwykłemu użytkownikowi systemu
+/bin - For binaries usable before the /usr partition is mounted. This is used for trivial binaries used in the 
+        very early boot stage or ones that you need to have available in booting single-user mode. Think of binaries like cat, ls, etc.
+
+/sbin - Same, but for scripts with superuser (root) privileges required. pliki wykonywalne poleceń, które mogą być wykonywane 
+        tylko przez administratora
+
+/usr/bin - Same as first, but for general system-wide binaries.
+
+/usr/sbin - Same as above, but for scripts with superuser (root) privileges required.
+   
+/sbin - 
+
+/usr - User System Resources dodatkowe programy, które umożliwiają pracę zwykłemu użytkownikowi systemu
 
 /opt - optional software
 
