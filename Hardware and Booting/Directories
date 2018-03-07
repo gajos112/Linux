@@ -1,0 +1,43 @@
+ls /F - Directories will be listed with slash.
+
+/home - W tym katalogu są tworzone podkatalogi, osobno dla każdego użytkownika. Z reguły, katalog taki ma dokładnie tę samą nazwę jak użytkownik, 
+        do którego należy. Przykładowo, jeżeli mamy w systemie użytkowników "maciek" i "ania", to będą oni mieli odpowiednio katalogi domowe 
+        /home/maciek i /home/ania. Użytkownik, w celu odwołania się do swojego katalogu domowego, nie musi wpisywać jego ścieżki 
+        dostępu, a jedynie skrót "~".
+
+/bin - binarne (wykonywalne) pliki najbardziej podstawowych narzędzi systemowych
+
+/boot - pliki niezbędne do uruchomienia systemu (kernel, initrd, pliki bootloadera - w przypadku GRUB)
+
+/dev - znajdujące się tutaj pliki nie są faktycznie plikami na dysku, lecz odnoszą się do urządzeń - za ich pośrednictwem system 
+       komunikuje się z urządzeniami (komunikacja niskopoziomowa)
+       
+/etc - pliki konfiguracyjne, ustawienia systemowe
+
+/lib - systemowe biblioteki dzielone (shared libraries), zawierające funkcje które są wykonywane przez wiele różnych programów
+
+/media - stąd mamy dostęp do nośników wyjmowanych (miejsce montowania nośników wymiennych) (np. pendrive, CD-ROM)
+
+/mnt - tutaj natomiast są "montowane" dyski (w dystrybucjach takich jak Ubuntu, dyski są montowane w /media)
+
+/proc - wirtualny katalog, zawierający dane o aktualnie uruchomionych procesach
+
+/proc/meminfo - info about memory
+
+/proc/cpuinfo - info about PCU
+
+/sys - virtual file system that can be accessed to set or obtain information about the kernel's view of the system.
+
+/root - ustawienia użytkownika root - głównego administratora każdego systemu uniksowego, który ma maksymalne uprawnienia
+
+/var - pliki systemowe, ale których zawartość często się zmienia, jak logi programów/systemu, pliki html czy skrypty php/cgi 
+       wykorzystywane przez serwer www - inaczej mówiąc są to dane zapisywane przez system i ważniejsze programy
+       
+/sbin - pliki wykonywalne poleceń, które mogą być wykonywane tylko przez administratora
+
+/usr - dodatkowe programy, które umożliwiają pracę zwykłemu użytkownikowi systemu
+
+mount - All  files  accessible in a Unix system are arranged in one big tree, the file hierarchy, rooted at /.  These files can be spread 
+        out over  several  devices. The  mount command serves to attach the filesystem found on some device to the big file tree. 
+        Conversely, the umount command will detach it again.
+        The standard form of the mount command is: mount -t type device dir
