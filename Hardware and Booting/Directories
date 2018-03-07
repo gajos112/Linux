@@ -37,6 +37,10 @@ ls /F - Directories will be listed with slash.
 
 /usr - User Syste Resources dodatkowe programy, które umożliwiają pracę zwykłemu użytkownikowi systemu
 
+/opt - optional software
+
+/tmp - temporary files, resides in RAM. After reboot files diesapear.
+
 mount - All  files  accessible in a Unix system are arranged in one big tree, the file hierarchy, rooted at /.  These files can be spread 
         out over  several  devices. The  mount command serves to attach the filesystem found on some device to the big file tree. 
         Conversely, the umount command will detach it again.
