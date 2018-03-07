@@ -40,3 +40,38 @@ Additional options:
 -f — Force the selected action
 -t <seconds> — Set time to shutdown. Use -t 0 for "now"
 -c <message> — Adds Message to Shutdown
+
+reboot - init 6
+halt - init 0
+systemctl reboot
+systemctl poweroff
+wall - write a message to all users
+
+Within Oracle Linux 7 introduction of systemd (systemd uses ‘targets’).The file /etc/inittab is no longer used to set the default 
+run level. Editing /etc/inittab file with the same manner under Oracle Linux 5/6 will have no effect in Oracle Linux 7. 
+Target units have a .target extension. Target units allow you to start a system with only the services that are required 
+for a specific purpose.
+
+To list the predefined systemd run level target units :
+
+# find / -name "runlevel*.target"
+/usr/lib/systemd/system/runlevel4.target
+/usr/lib/systemd/system/runlevel5.target
+/usr/lib/systemd/system/runlevel6.target
+/usr/lib/systemd/system/runlevel1.target
+/usr/lib/systemd/system/runlevel2.target
+/usr/lib/systemd/system/runlevel3.target
+/usr/lib/systemd/system/runlevel0.target
+
+To Check current default target
+# systemctl get-default
+
+To set a default target
+# systemctl set-default [new target]
+
+Set current target to default
+# systemctl default
+# systemctl isolate default.target
+
+
+
