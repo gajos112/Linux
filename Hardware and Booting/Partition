@@ -1,0 +1,14 @@
+First disk /dev/sda other one /dev/sdb. Disk can be divinted to 4 main partinions: /dev/sdb1, /dev/sdb2, /dev/sdb3 and /dev/sdb4.
+It is possible to create more partitions instead of partition sdb4 -> sdb5, sdb6 etc.
+
+Partitino layout for client:
+/dev/sdb1 - /boot
+/dev/sdb2 - /
+/dev/sdb3 - /home
+/dev/sdb4 - swap
+
+PIBS
+- performance
+- integrity
+- backup
+- security
