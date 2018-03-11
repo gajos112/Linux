@@ -1,0 +1,8 @@
+Common shells:
+- Bourne (sh)
+- C (csh)
+- Korn (ksh)
+- T (tcsh)
+- Bourne Again (bash)
+
+Run several commands together using ";" or "&&" the last one works only when first command success.
