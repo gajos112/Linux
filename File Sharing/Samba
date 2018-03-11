@@ -1,5 +1,26 @@
-mkdir /srv/smbshare
-install samba
-edit smb.conf to include a minimal [smbshare] section
-useradd -G users linda; smbpasswd -a linda
-mount -o username=linda //ip/smbshare /mnt
+1. mkdir /srv/smbshare
+2. install samba
+3. edit smb.conf to include a minimal [smbshare] section
+4. useradd -G users linda; smbpasswd -a linda
+5. mount -o username=linda //ip/smbshare /mnt
+
+edit smb.conf
+[smbshare]
+  comment = myshare
+  path = /srv/smbshare
+  
+To check configuration file use:
+
+root@kai:/etc/samba# testparm
+Load smb config files from /etc/samba/smb.conf
+rlimit_max: increasing rlimit_max (1024) to minimum Windows limit (16384)
+WARNING: The "syslog" option is deprecated
+Processing section "[homes]"
+Processing section "[printers]"
+Processing section "[print$]"
+Loaded services file OK.
+Server role: ROLE_STANDALONE
+
+Press enter to see a dump of your service definitions
+
+systemctl enable -- now smb - enable and start sambe service
