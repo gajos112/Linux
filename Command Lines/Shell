@@ -5,4 +5,5 @@ Common shells:
 - T (tcsh)
 - Bourne Again (bash)
 
-Run several commands together using ";" or "&&" the last one works only when first command success.
+Run several commands together using ";" or "&&" or "||" the second one works only when first command success and the last one works
+when first command fail.
