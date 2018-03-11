@@ -1,0 +1,5 @@
+mkdir /srv/smbshare
+install samba
+edit smb.conf to include a minimal [smbshare] section
+useradd -G users linda; smbpasswd -a linda
+mount -o username=linda //ip/smbshare /mnt
