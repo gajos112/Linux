@@ -1,0 +1,12 @@
+ SET or UNSET values of shell options and positional parameters. Change the value of shell attributes and positional parameters, or 
+      display the names and values of shell variables.
+  
+ ENV is a shell command for Unix and Unix-like operating systems. It is used to either print a list of environment variables or run 
+     another utility in an altered environment without having to modify the currently existing environment. Using env, variables may be 
+     added or removed, and existing variables may be changed by assigning new values to them.
+     
+EXPORT VARIABLE_NAME='some value' is the way to set an environment variable in any POSIX-compliant shell. If the variable already has a 
+      value, you can use export VARIABLE_NAME to make it an environment variable without changing its value.
+      
+SET create variable only for existing SHELL. If you create variable and then open new shell using /bin/bash you will not able to see this
+variable until you will export it.
