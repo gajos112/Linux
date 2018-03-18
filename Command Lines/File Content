@@ -1,0 +1,47 @@
+/dev/stdin = 0 (inputs from keyboard)
+/dev/stdout = 1 (standard output)
+/dev/stderr = 2 (standard error)
+
+cat - concatenate files and print on the standard output
+ 
+root@kali:~# cat > file.txt
+Hello
+Dupa
+
+(Press ctrl + d to end)
+root@kali:~# cat file.txt 
+Hello
+Dupa
+
+MORE is a filter for paging through text one screenful at a time.  This version is especially primitive.  Users should realize that less
+     provides more emulation plus extensive enhancements.
+
+LESS is a program similar to more, but it has many more features.  Less does not have to read the entire input file before starting, 
+     so with large input files it starts up faster than text editors like vi.
+   
+TR - Translate or delete characters
+
+root@kali:~# tr a-z A-Z <<< siem
+SIEM
+root@kali:~# 
+
+NL - Write each FILE to standard output, with line numbers added.
+
+OD - dump files in octal and other formats
+
+root@kali:~# od hello.txt 
+0000000 062510 066154 005157 064554 064556 020141 005062 067553
+0000020 064556 061545
+0000024
+
+root@kali:~# od -a hello.txt 
+0000000   H   e   l   l   o  nl   l   i   n   i   a  sp   2  nl   k   o
+0000020   n   i   e   c
+0000024
+root@kali:~# 
+
+WC - Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified.  A word is a 
+non-zero-length sequence of characters delimited by white space.
+
+find / -name core > output.ok 2 > fille.err - Output goes to files output.ok and errors go to filer.err.
+find / -name core > output.ok 2 > &1 - All goes to file output.ok
