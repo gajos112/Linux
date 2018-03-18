@@ -1,0 +1,36 @@
+TOUCH - Update the access and modification times of each FILE to the current time. If parametr doesn not exist it created new empty file.
+
+LS - list directory contents
+-a, --all - do not ignore entries starting with .
+-d, --directory - list directories themselves, not their contents
+-l - use a long listing format
+-R, --recursive - list subdirectories recursively
+-F - indicates directories by "/"
+
+CP - copy files and directories
+
+MV - move (rename) files
+
+RM - remove files or directories
+- rm * - remove all files
+-r, -R, --recursive - remove directories and their contents recursively
+
+MKDIR - make directories
+
+RMDIR - remove empty directories
+-r - recursiveq
+
+GZIP - reduces  the size of the named files using Lempel-Ziv coding (LZ77).  Whenever possible, each file is replaced by one with the 
+       extension .gz, while keeping the same ownership modes, access and modification times.
+       
+GUNZIP - can currently decompress files created by gzip, zip, compress, compress -H or pack
+
+BZIP2 - compresses  files using the Burrows-Wheeler block sorting text compression algorithm, and Huffman coding.  Compression is 
+        generally considerably better than that achieved by more conventional LZ77/LZ78-based compressors, and approaches the 
+        performance of the PPM family of statistical compressors.
+        
+BUNZIP2 -  (or bzip2 -d) decompresses all specified files.
+
+ XZ - a general-purpose data compression tool with command line syntax similar to gzip and bzip2.
+ 
+ UNXZ - decompress files created by XZ
