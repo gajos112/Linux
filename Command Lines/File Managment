@@ -1,0 +1,17 @@
+TOUCH - Update the access and modification times of each FILE to the current time. If parametr doesn not exist it created new empty file.
+
+LS - list directory contents
+-a, --all - do not ignore entries starting with .
+-d, --directory - list directories themselves, not their contents
+-l - use a long listing format
+-R, --recursive - list subdirectories recursively
+-F - indicates directories by "/"
+
+CP - copy files and directories
+
+MV - move (rename) files
+
+RM - remove files or directories
+- rm * - remove all files
+-r, -R, --recursive - remove directories and their contents recursively
+
