@@ -19,7 +19,7 @@ MORE is a filter for paging through text one screenful at a time.  This version 
 LESS is a program similar to more, but it has many more features.  Less does not have to read the entire input file before starting, 
      so with large input files it starts up faster than text editors like vi.
    
-TR - Translate or delete characters
+TR - Translate or delete characters. TR -d asd - can be used to remove prticular characters.
 
 root@kali:~# tr a-z A-Z <<< siem
 SIEM
@@ -28,6 +28,41 @@ root@kali:~#
 NL - Write each FILE to standard output, with line numbers added.
 
 OD - dump files in octal and other formats
+
+HEAD - Print the first 10 lines of each FILE to standard output.  With more than one FILE, precede each with a header giving the file name.
+After minus you can put number how many lines display.
+
+TAIL - Print the last 10 lines of each FILE to standard output.  With more than one FILE, precede each with a header giving the file name.
+After minus you can put number how many lines display.
+
+SPLIT - Output pieces of FILE to PREFIXaa, PREFIXab, ...; default size is 1000 lines, and default PREFIX is 'x'.
+
+DIFF -  compare files line by line
+
+SED - stream editor for filtering and transforming text
+- sed s/To/Ni/ test - After paramtere s we put /xxx/yyy/; x will be changed to y
+- sed -i s/To/Ni/ test - Will save results on original file.
+
+CUT - remove sections from each line of files
+- cut -d' ' -f 1,2 test - Will display first and second column which are seperate with space.
+
+EXPAND - convert tabs to spaces
+
+UNEXPAND - convert spaces to tabs
+
+PR - convert text files for printing
+
+UNIQ - report or omit repeated lines
+-u, --unique - only print unique lines
+-d, --repeated - only print duplicate lines, one for each group
+-d, --repeated - only print duplicate lines, one for each group
+
+SORT - sort lines of text files
+-n, --numeric-sort - compare according to string numerical value
+
+PASTE - merge lines of files
+
+JOIN - join lines of two files on a common field
 
 root@kali:~# od hello.txt 
 0000000 062510 066154 005157 064554 064556 020141 005062 067553
