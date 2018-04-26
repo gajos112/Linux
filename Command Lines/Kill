@@ -1,0 +1,11 @@
+kill -s signalName PID
+
+- 0	SIGNULL (NULL)	Null	Check access to pid
+- 1	SIGHUP (HUP)	Hangup	Terminate; can be trapped
+- 2	SIGINT (INT)	Interrupt	Terminate; can be trapped
+- 3	SIGQUIT (QUIT)	Quit	Terminate with core dump; can be trapped
+- 9	SIGKILL (KILL)	Kill	Forced termination; cannot be trapped
+- 15	SIGTERM (TERM)	Terminate	Terminate; can be trapped
+- 24	SIGSTOP (STOP)	Stop	Pause the process; cannot be trapped. This is default if signal not provided to kill command.
+- 25	SIGTSTP (STP)	Terminal	Stop/pause the process; can be trapped
+- 26	SIGCONT (CONT)	Continue	Run a stopped process
