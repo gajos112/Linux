@@ -1,0 +1,1 @@
+ awk -F"," '{ print $7 }' csv_pcap | sed -r 's/"//g' | sed -r 's/0000000000//g' | cut -c5-6
